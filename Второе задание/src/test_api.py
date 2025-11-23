@@ -13,8 +13,7 @@ class TestAdvertisementsAPI:
             (100000, "Телефон", 10000),   # API принимает, считается багом
         ]
     )
-    def test_create_item(self, seller_id, name, price):
-        """Проверка успешного создания объявления (факт API)."""
+    def test_create_item(self, seller_id, name, price): #Проверка успешного создания объявления (факт API).
 
         url = f"{BASE_URL}/api/1/item"
         payload = {

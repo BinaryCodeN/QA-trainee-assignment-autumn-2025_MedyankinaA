@@ -78,7 +78,7 @@ class TestAdvertisementsAPI:
         assert response.status_code == 200
         item_data = response.json()
         assert isinstance(item_data, list)
-        print(f"✅ GET /api/1/item/{item_id} вернул данные объявления")
+        print(f"GET /api/1/item/{item_id} вернул данные объявления")
 
     def test_get_statistics_v1(self, create_item): #Проверка получения статистики (v1)
 
@@ -92,7 +92,7 @@ class TestAdvertisementsAPI:
         statistics = response.json()
         assert isinstance(statistics, list)
         assert len(statistics) > 0
-        print(f"✅ Статистика v1: {statistics}")
+        print(f"Статистика v1: {statistics}")
 
     def test_get_statistics_v2(self, create_item): #Проверка получения статистики (v2)
 
@@ -118,7 +118,7 @@ class TestAdvertisementsAPI:
 
         #  Исправление на корректный возврат статуса = 200!
         assert response.status_code == 200
-        print(f"✅ DELETE /api/2/item/{item_id} вернул 200")
+        print(f" DELETE /api/2/item/{item_id} вернул 200")
 
     def test_get_items_by_seller_id(self): #Проверка получения всех объявлений продавца
         seller_id = 123456
